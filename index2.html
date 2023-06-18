@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice_Kushnikova2</title>
+</head>
+<body>
+    <script>
+            /*
+            const mas = new Array(5, 3, 10, 50, 25, 1);
+			const mas2 = [111, 325, 64, 654, 33, 172];
+			const mas3 = Array.of(5, 3, 10, 50, 25, 1);
+
+            document.write("Было: " + mas[5] + "<br>");
+			mas[5] = 50000000;
+			document.write("Стало: " + mas[5]);
+            document.write("<br>")
+            function showArrayLength() {
+            var arrayLength = mas.length;
+            alert("Длина массива: " + arrayLength);}
+            document.addEventListener('mouseover', showArrayLength()) 
+            console.log(mas.length);
+            for (let i = 0; i < mas.length; i++) {
+				document.write(mas[i] + " ");
+			}
+			document.write("<br> Длина массива mas: " + mas.length);*/
+            const mas1 = [111, 325, 64, 654, 33, 172];
+			const mas2 = Array.of(5, 3, 10, 50, 25, 1);
+
+            const newmas = [...mas1, ...mas2];
+			document.write("новый массив:<br>");
+			for (let i = 0; i < newmas.length; i++) {
+				document.write(newmas[i] + " ");
+			}
+			document.write("<br><br>");
+
+
+            let lastElement = newmas.pop();
+			document.write("последний элемент (1) is " + lastElement + "<br>");
+			
+			document.write("новый массив (1):<br>");
+			for (let i = 0; i < newmas.length; i++) {
+				document.write(newmas[i] + " ");
+			}
+			document.write("<br><br>");
+
+
+            let newel = 50;
+			document.write("новый элемент " + newel + "<br>");
+			newmas.unshift(newel);
+			document.write("нвоый массив (3):<br>");
+			for (let i = 0; i < newmas.length; i++) {
+				document.write(newmas[i] + " ");
+			}
+
+            
+            document.write("<br><br>");
+            let now = new Date();
+			document.write(now); 
+
+            document.write("<br><br>");
+            
+			const m = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", 
+							"Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+             
+			let Date1 = new Date();
+			let Date11 = "Сегодня: " + Date1.getDate() + " " + m[Date1.getMonth()] + 
+                " " + Date1.getFullYear();
+			document.write(Date11);
+            document.write("<br><br>");
+
+            let a1 = getRandomInt();
+			let a2 = getRandomInt();
+			document.write(a1 + " * " + a2 + " = " + Prod(a1, a2));
+			
+			function getRandomInt() {
+				return Math.floor(Math.random() * 50);
+			}
+			
+			function Prod(n1, n2) {
+				return n1 * n2;
+			}
+
+
+			
+
+
+
+    </script>
+</body>
+</html>
